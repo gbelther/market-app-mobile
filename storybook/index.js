@@ -1,6 +1,4 @@
 // if you use expo remove this line
-import "react-native-gesture-handler";
-import { registerRootComponent } from "expo";
 import {
   getStorybookUI,
   configure,
@@ -8,7 +6,6 @@ import {
 } from "@storybook/react-native";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import App from "../App";
 import { loadStories } from "./storyLoader";
 import { Container } from "./util/Container";
 
@@ -28,7 +25,5 @@ configure(() => {
 const StorybookUIRoot = getStorybookUI({
   asyncStorage: require("@react-native-async-storage/async-storage").default,
 });
-
-registerRootComponent(StorybookUIRoot);
 
 export default StorybookUIRoot;

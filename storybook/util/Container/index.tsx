@@ -1,12 +1,18 @@
 import React, { ReactNode } from "react";
-import { View } from "react-native";
+import { View, SafeAreaView } from "react-native";
+
+import styles from "./styles";
 
 interface IContainer {
   children: ReactNode;
 }
 
 const Container = ({ children }: IContainer) => {
-  return <View style={{ flex: 1 }}>{children}</View>;
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>{children}</View>
+    </SafeAreaView>
+  );
 };
 
 export { Container };
