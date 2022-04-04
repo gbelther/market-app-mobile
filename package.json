@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "expo start --dev-client",
+    "env:sb": "node scripts/environments/app-environments.js storybook_env",
+    "env:app": "node scripts/environments/app-environments.js dev_env",
+    "start": "yarn env:app && expo start --dev-client",
+    "start:sb": "yarn env:sb && expo start --dev-client",
+    "start:dev": "yarn env:app && expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",

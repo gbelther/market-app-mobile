@@ -5,10 +5,12 @@ import { SafeAreaView, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
+import config from "./config";
+
 import Storybook from "./storybook";
 import Routes from "./src/routes";
 
-const loadStorybook = false;
+const loadStorybook = config.load_storybook;
 
 const App = () => {
   if (loadStorybook) {
