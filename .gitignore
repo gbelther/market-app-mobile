@@ -53,3 +53,7 @@ buck-out/
 .expo/
 web-build/
 dist/
+
+# Environments
+env/*
+!env/example_env.json
