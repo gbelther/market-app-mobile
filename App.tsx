@@ -4,11 +4,13 @@ import { registerRootComponent } from "expo";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { ThemeProvider } from "styled-components";
 
 import config from "./config";
 
 import Storybook from "./storybook";
 import Routes from "./src/routes";
+import theme from "./src/styles/theme";
 
 const loadStorybook = config.load_storybook;
 
@@ -22,11 +24,15 @@ const App = () => {
   }
 
   return (
-    <GestureHandlerRootView style={[styles.container, styles.paddingStatusBar]}>
-      <SafeAreaView style={styles.container}>
-        <Routes />
-      </SafeAreaView>
-    </GestureHandlerRootView>
+    <ThemeProvider theme={theme}>
+      <GestureHandlerRootView
+        style={[styles.container, styles.paddingStatusBar]}
+      >
+        <SafeAreaView style={styles.container}>
+          <Routes />
+        </SafeAreaView>
+      </GestureHandlerRootView>
+    </ThemeProvider>
   );
 };
 

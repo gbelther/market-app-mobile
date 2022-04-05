@@ -1,12 +1,13 @@
 import React from "react";
-import { render } from "@testing-library/react-native";
 
-import Button from ".";
+import { renderTheme } from "../../util/tests/RenderTheme";
+import { Button } from "./Button";
 
 describe("<Button />", () => {
   it("should be able to be correctly", () => {
-    const { container } = render(<Button />);
+    const { getByTestId } = renderTheme(<Button />);
 
-    expect(container).toBeTruthy();
+    const component = getByTestId("test");
+    expect(component).toHaveStyleRule("opacity", 0.5);
   });
 });

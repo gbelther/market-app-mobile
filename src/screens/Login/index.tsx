@@ -1,11 +1,13 @@
 import React from "react";
 import { Text, View } from "react-native";
 
+import * as Sty from "./styles";
+
 const Login = () => {
   return (
-    <View>
+    <Sty.Container>
       <Text>Screen Login</Text>
-    </View>
+    </Sty.Container>
   );
 };
 
