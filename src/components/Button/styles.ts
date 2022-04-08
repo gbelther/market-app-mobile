@@ -7,5 +7,4 @@ interface IContainerProps {
 export const Container = styled.View<IContainerProps>`
   flex: 1;
   background-color: ${({ theme }) => theme.color.main};
-  opacity: 0.5;
 `;
