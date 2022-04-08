@@ -5,9 +5,13 @@
 
 function loadStories() {
   require("../src/components/Button/Button.stories");
+  require("../src/components/InputText/InputText.stories");
 }
 
-const stories = ["../src/components/Button/Button.stories"];
+const stories = [
+  "../src/components/Button/Button.stories",
+  "../src/components/InputText/InputText.stories",
+];
 
 module.exports = {
   loadStories,

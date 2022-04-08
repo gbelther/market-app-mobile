@@ -1,5 +1,26 @@
 export default {
   color: {
-    main: "#ff9100",
+    main: "#feb44b",
+    main_dark: "#ff9100",
+    main_extra_dark: "#ff6e00",
+    dark_01: "#171717",
+    dark_02: "#474747",
+    dark_03: "#757575",
+    dark_04: "#949494",
+    light_01: "#ffffff",
+    light_02: "#E5E5E5",
+    light_03: "#C7C7C7",
+    light_04: "#ABABAB",
+    error: "#CA0000",
+    error_light: "#CB3E3E",
+    error_dark: "#8A0E0E",
+    success: "#1A9525",
+    success_light: "#57D862",
+    success_dark: "#106F19",
+  },
+  fontFamilies: {
+    primary_400: "Inter_400Regular",
+    primary_600: "Inter_600SemiBold",
+    primary_700: "Inter_700Bold",
   },
 };
