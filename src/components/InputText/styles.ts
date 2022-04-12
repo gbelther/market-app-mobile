@@ -54,8 +54,6 @@ export const Input = styled.TextInput<IInputProps>`
   padding: 0 4px;
 `;
 
-export const FeedbackWrapper = styled.View``;
-
 export const Feedback = styled.Text<IFeedbackProps>`
   font-size: ${RFValue(10)}px;
   font-family: ${({ theme }) => theme.fontFamilies.primary_700};

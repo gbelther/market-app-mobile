@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StyleProp, TextInputProps, TextStyle, ViewProps } from "react-native";
 
 import * as Sty from "./styles";
 
@@ -8,6 +9,7 @@ interface IFeedback {
 }
 
 interface IProps {
+  id?: string;
   label?: string;
   feedback?: IFeedback;
   showFeedbackBorderColor?: boolean;
@@ -16,6 +18,7 @@ interface IProps {
 }
 
 const InputText = ({
+  id,
   label = "",
   feedback,
   showFeedbackBorderColor = false,
@@ -37,10 +40,11 @@ const InputText = ({
   };
 
   return (
-    <Sty.Container>
+    <Sty.Container testID={id}>
       {!!label && <Sty.Label>{label}</Sty.Label>}
       <Sty.InputWrapper>
         <Sty.Input
+          testID="input-text-component"
           value={value}
           isFocus={isFocus}
           status={showFeedbackBorderColor && feedback?.status}
@@ -50,7 +54,12 @@ const InputText = ({
         />
       </Sty.InputWrapper>
       {feedback && feedback.message && (
-        <Sty.Feedback status={feedback.status}>{feedback.message}</Sty.Feedback>
+        <Sty.Feedback
+          testID="input-text-component-feedback"
+          status={feedback.status}
+        >
+          {feedback.message}
+        </Sty.Feedback>
       )}
     </Sty.Container>
   );

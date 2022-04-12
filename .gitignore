@@ -57,3 +57,6 @@ dist/
 # Environments
 env/*
 !env/example_env.json
+
+# Jest
+coverage
